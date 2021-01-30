@@ -10,13 +10,27 @@
 <body>
     <main class="bg-dark p-5" style="height: 100vh;">
         <section class="container border p-4 bg-white form-soma">
-            <h1 class="display-4">Soma</h1>
+            <h1 class="display-4">Calculadora</h1>
             <hr/>
             <form action="" method="POST">
                 <input type="text" placeholder="Digite um número.." name="num1" class="form-control my-3">
                 <input type="text" placeholder="Digite um número.." name="num2" class="form-control my-3">
-                <button class="btn btn-primary ">Enviar</button>
-                <button class="btn btn-secondary" type="reset">Cancelar</button>
+                
+                <input type="radio" name="opc" id="soma" checked>
+                <label for="soma">Somar</label>
+                <input type="radio" name="opc" id="subt" >
+                <label for="subt">Subtrair</label>
+                <input type="radio" name="opc" id="mult" >
+                <label for="mult">Multiplicar</label>
+                <input type="radio" name="opc" id="div" >
+                <label for="div">Dividir</label>
+                
+                    
+                <br>
+                <div class="mt-2">
+                    <button class="btn btn-primary">Enviar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
             </form>
         </section>
     </main>
