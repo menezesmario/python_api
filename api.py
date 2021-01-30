@@ -13,4 +13,9 @@ def home():
 def not_found(error):
     return render_template("error.html")
 
+@app.errorhandler(405)
+def not_found2(error):
+    return "O verbo usado não existe"
+
+
 app.run(port=8080, debug=True)
