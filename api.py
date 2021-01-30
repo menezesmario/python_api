@@ -9,6 +9,10 @@ def home():
     else:
         return "Você está acessando via POST"
 
+@app.route("/<int:id>")
+def Home_id(id):
+    return str(id + 1)
+
 @app.errorhandler(404)
 def not_found(error):
     return render_template("error.html")
