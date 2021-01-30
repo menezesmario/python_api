@@ -7,9 +7,19 @@ def home():
     if (request.method == "GET"):
         return render_template("index.html")
     else:
-        if (request.form["num1"] != "" and request.form["num2" != ""] ):
-            soma = int(request.form["num1"]) + int(request.form["num2"])
-            return str(soma)
+        if (request.form["num1"] != "" and request.form["num2"] != "" ):
+            if (request.form["opc"] == "soma"):
+                soma = int(request.form["num1"]) + int(request.form["num2"])
+                return str(soma)
+            elif (request.form["opc"] == "subt"):
+                subt = int(request.form["num1"]) - int(request.form["num2"])
+                return str(subt)
+            elif (request.form["opc"] == "mult"):
+                mult = int(request.form["num1"]) * int(request.form["num2"])
+                return str(mult)
+            elif (request.form["opc"] == "divi"):
+                divi = int(request.form["num1"]) / int(request.form["num2"])
+                return str(divi)
         else:
             return "informe um valor"
 
