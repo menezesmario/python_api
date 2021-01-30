@@ -7,7 +7,7 @@ def home():
     if (request.method == "GET"):
         return render_template("index.html")
     else:
-        if (request.form["num1"] != "" or request.form["num2" != ""] ):
+        if (request.form["num1"] != "" and request.form["num2" != ""] ):
             soma = int(request.form["num1"]) + int(request.form["num2"])
             return str(soma)
         else:
