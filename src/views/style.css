@@ -2,6 +2,10 @@
   border-radius: 20px;
 }
 
+.opacity-2 {
+  opacity:0.4!important;
+}
+
 button {
   margin-top: 1em;
 }
