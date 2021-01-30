@@ -9,6 +9,8 @@ def home():
     else:
         return "Você está acessando via POST"
 
-
+@app.errorhandler(404)
+def not_found(error):
+    return render_template("error.html")
 
 app.run(port=8080, debug=True)
