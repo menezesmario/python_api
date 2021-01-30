@@ -7,7 +7,11 @@ def home():
     if (request.method == "GET"):
         return render_template("index.html")
     else:
-        return "Você está acessando via POST"
+        if (request.form["num1"] != "" or request.form["num2" != ""] ):
+            soma = int(request.form["num1"]) + int(request.form["num2"])
+            return str(soma)
+        else:
+            return "informe um valor"
 
 @app.route("/<int:id>")
 def Home_id(id):
