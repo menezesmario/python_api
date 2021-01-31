@@ -10,6 +10,7 @@ def home():
         if (request.form["num1"] != "" and request.form["num2"] != "" ):
             num1 = request.form["num1"]
             num2 = request.form["num2"]
+            calc = ''
             if (request.form["opc"] == "soma"):
                 soma = int(num1) + int(num2)
                 return str(soma)
